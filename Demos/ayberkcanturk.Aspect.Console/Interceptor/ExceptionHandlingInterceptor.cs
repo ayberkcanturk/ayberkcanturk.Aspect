@@ -1,12 +1,12 @@
 ﻿using ayberkcanturk.Aspect.Core;
+using ayberkcanturk.Aspect.Default;
 using System;
 
 namespace ayberkcanturk.Aspect.Console
 {
-    [AttributeUsage(AttributeTargets.Method)]
-    public class ExceptionHandlingInterceptor : Attribute, IInterceptor
+    public class ExceptionHandlingInterceptor : Interceptor
     {
-        public void Intercept(ref IInvocation invocation)
+        public override void Intercept(ref IInvocation invocation)
         {
             try
             {

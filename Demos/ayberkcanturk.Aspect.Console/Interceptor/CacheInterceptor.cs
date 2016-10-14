@@ -1,10 +1,10 @@
 ﻿using ayberkcanturk.Aspect.Core;
+using ayberkcanturk.Aspect.Default;
 using System;
 
 namespace ayberkcanturk.Aspect.Console
 {
-    [AttributeUsage(AttributeTargets.Method)]
-    public class CacheInterceptor : Attribute, IInterceptor
+    public class CacheInterceptor : Interceptor
     {
         public int DurationInMinute { get; set; }
 
@@ -15,7 +15,7 @@ namespace ayberkcanturk.Aspect.Console
             cacheService = Dao.Instance;
         }
 
-        public void Intercept(ref IInvocation invocation)
+        public override void Intercept(ref IInvocation invocation)
         {
             string cacheKey = string.Format("{0}_{1}", invocation.MethodName, string.Join("_", invocation.Arguments));
 

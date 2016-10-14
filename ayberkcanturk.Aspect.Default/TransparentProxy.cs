@@ -7,14 +7,10 @@ using System.Runtime.Remoting.Proxies;
 
 namespace ayberkcanturk.Aspect.Default
 {
-    //[DebuggerStepThrough]
+    [DebuggerStepThrough]
     public class TransparentProxy<T, TI> : RealProxy where T : TI, new()
     {
         T instance = default(T);
-        private Predicate<MethodInfo> _filter;
-        public event EventHandler<IMethodCallMessage> BeforeExecute;
-        public event EventHandler<IMethodCallMessage> AfterExecute;
-        public event EventHandler<IMethodCallMessage> ErrorExecuting;
 
         private TransparentProxy()
             : base(typeof(TI))
@@ -26,34 +22,6 @@ namespace ayberkcanturk.Aspect.Default
         {
             TransparentProxy<T,TI> instance = new TransparentProxy<T,TI>();
             return (TI)instance.GetTransparentProxy();
-        }
-
-        private void OnBeforeExecute(IMethodCallMessage methodCall)
-        {
-            if (BeforeExecute != null)
-            {
-                var methodInfo = methodCall.MethodBase as MethodInfo;
-                if (_filter(methodInfo))
-                    BeforeExecute(this, methodCall);
-            }
-        }
-        private void OnAfterExecute(IMethodCallMessage methodCall)
-        {
-            if (AfterExecute != null)
-            {
-                var methodInfo = methodCall.MethodBase as MethodInfo;
-                if (_filter(methodInfo))
-                    AfterExecute(this, methodCall);
-            }
-        }
-        private void OnErrorExecuting(IMethodCallMessage methodCall)
-        {
-            if (ErrorExecuting != null)
-            {
-                var methodInfo = methodCall.MethodBase as MethodInfo;
-                if (_filter(methodInfo))
-                    ErrorExecuting(this, methodCall);
-            }
         }
 
         public override IMessage Invoke(IMessage message)

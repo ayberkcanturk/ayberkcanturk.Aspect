@@ -8,3 +8,13 @@ C:\Users\ayberk.canturk\Downloads\ayberkcanturk.Framework.Aspect\Demos\ayberkcan
 C:\Users\ayberk.canturk\Downloads\ayberkcanturk.Framework.Aspect\Demos\ayberkcanturk.Aspect.Console\obj\Debug\ayberkcanturk.Aspect.Console.csprojResolveAssemblyReference.cache
 C:\Users\ayberk.canturk\Downloads\ayberkcanturk.Framework.Aspect\Demos\ayberkcanturk.Aspect.Console\obj\Debug\ayberkcanturk.Aspect.Console.exe
 C:\Users\ayberk.canturk\Downloads\ayberkcanturk.Framework.Aspect\Demos\ayberkcanturk.Aspect.Console\obj\Debug\ayberkcanturk.Aspect.Console.pdb
+D:\AYBERK CANTURK\ayberkcanturk.Aspect\Demos\ayberkcanturk.Aspect.Console\bin\Debug\ayberkcanturk.Aspect.Console.exe.config
+D:\AYBERK CANTURK\ayberkcanturk.Aspect\Demos\ayberkcanturk.Aspect.Console\obj\Debug\ayberkcanturk.Aspect.Console.exe
+D:\AYBERK CANTURK\ayberkcanturk.Aspect\Demos\ayberkcanturk.Aspect.Console\obj\Debug\ayberkcanturk.Aspect.Console.pdb
+D:\AYBERK CANTURK\ayberkcanturk.Aspect\Demos\ayberkcanturk.Aspect.Console\bin\Debug\ayberkcanturk.Aspect.Console.exe
+D:\AYBERK CANTURK\ayberkcanturk.Aspect\Demos\ayberkcanturk.Aspect.Console\bin\Debug\ayberkcanturk.Aspect.Console.pdb
+D:\AYBERK CANTURK\ayberkcanturk.Aspect\Demos\ayberkcanturk.Aspect.Console\bin\Debug\ayberkcanturk.Aspect.Core.dll
+D:\AYBERK CANTURK\ayberkcanturk.Aspect\Demos\ayberkcanturk.Aspect.Console\bin\Debug\ayberkcanturk.Aspect.Default.dll
+D:\AYBERK CANTURK\ayberkcanturk.Aspect\Demos\ayberkcanturk.Aspect.Console\bin\Debug\ayberkcanturk.Aspect.Core.pdb
+D:\AYBERK CANTURK\ayberkcanturk.Aspect\Demos\ayberkcanturk.Aspect.Console\bin\Debug\ayberkcanturk.Aspect.Default.pdb
+D:\AYBERK CANTURK\ayberkcanturk.Aspect\Demos\ayberkcanturk.Aspect.Console\obj\Debug\ayberkcanturk.Aspect.Console.csprojResolveAssemblyReference.cache
