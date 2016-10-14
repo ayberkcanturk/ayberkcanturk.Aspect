@@ -1,0 +1,6 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Demos/ayberkcanturk.Aspect.Console/bin/Debug/ayberkcanturk.Aspect.Console.vshost.exe
+/Demos/ayberkcanturk.Aspect.Console/bin/Debug
