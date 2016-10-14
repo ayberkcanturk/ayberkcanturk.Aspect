@@ -1,10 +1,9 @@
-﻿using ayberkcanturk.Aspect.Core;
-using ayberkcanturk.Aspect.Default;
-using System;
+# ayberkcanturk.Aspect
+ayberkcanturk.Aspect is a provider of a proxy between the woven class and the consumer. It uses the same mechanism as in remoting: the client 'see' the remote object, but it actually talks to its proxy. All accesses to the aspected object go through the proxy class. The aspect is implemented as a transparent proxy, derived from the System.Runtime.Remoting.Proxies.RealProxy class.
 
-namespace ayberkcanturk.Aspect.Console
-{
-    public class CacheInterceptor : Interceptor
+#Usage
+
+    public class CacheInterceptor : Attribute, IInterceptor
     {
         public int DurationInMinute { get; set; }
 
@@ -15,7 +14,7 @@ namespace ayberkcanturk.Aspect.Console
             cacheService = Dao.Instance;
         }
 
-        public override void Intercept(ref IInvocation invocation)
+        public void Intercept(ref IInvocation invocation)
         {
             string cacheKey = string.Format("{0}_{1}", invocation.MethodName, string.Join("_", invocation.Arguments));
 
@@ -37,5 +36,15 @@ namespace ayberkcanturk.Aspect.Console
                 }
             }
         }
+        
+        
+    class Program
+    {
+        static void Main(string[] args)
+        {    
+            IProductService productService2 = TransparentProxy<ProductService, IProductService>.GenerateProxy();
+            var product2 = productService2.GetProduct(1);
+            Console.WriteLine($"Id: {product2.Id}, Name: {product2.Name}, Price: {product2.Price}");
+            Console.ReadLine();
+        }
     }
-}

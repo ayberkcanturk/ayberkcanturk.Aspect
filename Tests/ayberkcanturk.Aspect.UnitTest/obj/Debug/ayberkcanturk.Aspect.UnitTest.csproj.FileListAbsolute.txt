@@ -9,3 +9,14 @@ C:\Users\ayberk.canturk\Downloads\ayberkcanturk.Framework.Aspect\Tests\ayberkcan
 C:\Users\ayberk.canturk\Downloads\ayberkcanturk.Framework.Aspect\Tests\ayberkcanturk.Aspect.UnitTest\obj\Debug\ayberkcanturk.Aspect.UnitTest.csprojResolveAssemblyReference.cache
 C:\Users\ayberk.canturk\Downloads\ayberkcanturk.Framework.Aspect\Tests\ayberkcanturk.Aspect.UnitTest\obj\Debug\ayberkcanturk.Aspect.UnitTest.dll
 C:\Users\ayberk.canturk\Downloads\ayberkcanturk.Framework.Aspect\Tests\ayberkcanturk.Aspect.UnitTest\obj\Debug\ayberkcanturk.Aspect.UnitTest.pdb
+D:\AYBERK CANTURK\ayberkcanturk.Aspect\Tests\ayberkcanturk.Aspect.UnitTest\bin\Debug\ayberkcanturk.Aspect.UnitTest.dll
+D:\AYBERK CANTURK\ayberkcanturk.Aspect\Tests\ayberkcanturk.Aspect.UnitTest\bin\Debug\ayberkcanturk.Aspect.UnitTest.pdb
+D:\AYBERK CANTURK\ayberkcanturk.Aspect\Tests\ayberkcanturk.Aspect.UnitTest\bin\Debug\ayberkcanturk.Aspect.Core.dll
+D:\AYBERK CANTURK\ayberkcanturk.Aspect\Tests\ayberkcanturk.Aspect.UnitTest\bin\Debug\ayberkcanturk.Aspect.Default.dll
+D:\AYBERK CANTURK\ayberkcanturk.Aspect\Tests\ayberkcanturk.Aspect.UnitTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\AYBERK CANTURK\ayberkcanturk.Aspect\Tests\ayberkcanturk.Aspect.UnitTest\bin\Debug\ayberkcanturk.Aspect.Core.pdb
+D:\AYBERK CANTURK\ayberkcanturk.Aspect\Tests\ayberkcanturk.Aspect.UnitTest\bin\Debug\ayberkcanturk.Aspect.Default.pdb
+D:\AYBERK CANTURK\ayberkcanturk.Aspect\Tests\ayberkcanturk.Aspect.UnitTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+D:\AYBERK CANTURK\ayberkcanturk.Aspect\Tests\ayberkcanturk.Aspect.UnitTest\obj\Debug\ayberkcanturk.Aspect.UnitTest.csprojResolveAssemblyReference.cache
+D:\AYBERK CANTURK\ayberkcanturk.Aspect\Tests\ayberkcanturk.Aspect.UnitTest\obj\Debug\ayberkcanturk.Aspect.UnitTest.dll
+D:\AYBERK CANTURK\ayberkcanturk.Aspect\Tests\ayberkcanturk.Aspect.UnitTest\obj\Debug\ayberkcanturk.Aspect.UnitTest.pdb
