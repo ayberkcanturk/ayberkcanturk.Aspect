@@ -46,10 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IOnAfterVoidAspect.cs" />
-    <Compile Include="IAspect.cs" />
-    <Compile Include="IOnBeforeInterruptingAspect.cs" />
-    <Compile Include="IOnBeforeVoidAspect.cs" />
     <Compile Include="IInterceptor.cs" />
     <Compile Include="IInvocation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

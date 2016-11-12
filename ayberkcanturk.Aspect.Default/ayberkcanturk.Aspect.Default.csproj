@@ -40,7 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DynamicProxy.cs" />
     <Compile Include="Interceptor.cs" />
     <Compile Include="Invocation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

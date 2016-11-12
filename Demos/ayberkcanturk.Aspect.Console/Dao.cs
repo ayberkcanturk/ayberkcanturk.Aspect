@@ -6,11 +6,10 @@ namespace ayberkcanturk.Aspect.Console
     public class Dao : IDao
     {
         private static readonly Lazy<IDao> lazy = new Lazy<IDao>(() => new Dao());
-        private readonly IDictionary<string, Tuple<object, DateTime>> _InMemCache;
-        private readonly IDictionary<int, Product> _InMemDb;
-
         public static IDao Instance { get { return lazy.Value; } }
 
+        private readonly IDictionary<string, Tuple<object, DateTime>> _InMemCache;
+        private readonly IDictionary<int, Product> _InMemDb;
         private Dao()
         {
             _InMemCache = new Dictionary<string, Tuple<object, DateTime>>();
