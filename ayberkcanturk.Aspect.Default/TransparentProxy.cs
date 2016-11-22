@@ -7,10 +7,10 @@ using System.Runtime.Remoting.Proxies;
 
 namespace ayberkcanturk.Aspect.Default
 {
-    [DebuggerStepThrough]
+    //[DebuggerStepThrough]
     public class TransparentProxy<T, TI> : RealProxy where T : TI, new()
     {
-        T instance = default(T);
+        TI instance = default(T);
 
         private TransparentProxy()
             : base(typeof(TI))
@@ -18,10 +18,9 @@ namespace ayberkcanturk.Aspect.Default
             instance = new T();
         }
 
-        public static TI GenerateProxy()
+        internal TransparentProxy(TI instance) : base(typeof(TI))
         {
-            TransparentProxy<T, TI> instance = new TransparentProxy<T, TI>();
-            return (TI)instance.GetTransparentProxy();
+            this.instance = instance;
         }
 
         public override IMessage Invoke(IMessage message)
@@ -36,11 +35,6 @@ namespace ayberkcanturk.Aspect.Default
                 object[] interceptors = methodInfo.GetCustomAttributes(typeof(IInterceptor), true);
                 IInvocation invocation = null;
                 object response = null;
-
-                if (response != null)
-                {
-                    returnMessage = new ReturnMessage(response, null, 0, methodCallMessage.LogicalCallContext, methodCallMessage);
-                }
 
                 if (interceptors.Length > 0)
                 {
@@ -58,8 +52,9 @@ namespace ayberkcanturk.Aspect.Default
                 if (invocation != null && invocation.IsProcceeded.Equals(false))
                 {
                     response = methodCallMessage.MethodBase.Invoke(instance, methodCallMessage.InArgs);
-                    returnMessage = new ReturnMessage(response, null, 0, methodCallMessage.LogicalCallContext, methodCallMessage);
                 }
+
+                returnMessage = new ReturnMessage(response, null, 0, methodCallMessage.LogicalCallContext, methodCallMessage);
 
                 return returnMessage;
             }
