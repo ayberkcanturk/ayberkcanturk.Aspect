@@ -26,7 +26,7 @@ namespace ayberkcanturk.Aspect.Console
 
         public Product GetProductWithCache(int productId)
         {
-            Product product = dao.GetByKeyFromCache<Product>("GetProduct_1");
+            Product product = dao.GetByKeyFromCache<Product>($"GetProduct_{productId}");
             if (product == null)
             {
                 product = dao.GetByIdFromDb(productId);
