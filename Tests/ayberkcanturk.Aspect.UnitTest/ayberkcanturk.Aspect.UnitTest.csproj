@@ -56,7 +56,7 @@
     <Compile Include="Interceptor\ExceptionHandlingInterceptor.cs" />
     <Compile Include="IProductService.cs" />
     <Compile Include="ProductService.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="ProductServiceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
