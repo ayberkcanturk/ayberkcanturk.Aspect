@@ -8,6 +8,7 @@ namespace ayberkcanturk.Aspect.Console
         public string Name { get; set; }
         public double Price { get; set; }
     }
+
     public class ProductService : IProductService
     {
         private readonly IDao dao;
@@ -18,7 +19,6 @@ namespace ayberkcanturk.Aspect.Console
         }
 
         [CacheInterceptor(DurationInMinute = 10)]
-        //[ExceptionHandlingInterceptor]
         public Product GetProduct(int productId)
         {
             return dao.GetByIdFromDb(productId);
@@ -27,7 +27,6 @@ namespace ayberkcanturk.Aspect.Console
         public Product GetProductWithCache(int productId)
         {
             Product product = dao.GetByKeyFromCache<Product>("GetProduct_1");
-
             if (product == null)
             {
                 product = dao.GetByIdFromDb(productId);

@@ -7,13 +7,12 @@ using System.Runtime.Remoting.Proxies;
 
 namespace ayberkcanturk.Aspect.Default
 {
-    //[DebuggerStepThrough]
+    [DebuggerStepThrough]
     public class TransparentProxy<T, TI> : RealProxy where T : TI, new()
     {
-        TI instance = default(T);
+        private readonly TI instance;
 
-        private TransparentProxy()
-            : base(typeof(TI))
+        private TransparentProxy() : base(typeof(TI))
         {
             instance = new T();
         }
@@ -28,7 +27,6 @@ namespace ayberkcanturk.Aspect.Default
             IMethodCallMessage methodCallMessage = message as IMethodCallMessage;
             Type realType = typeof(T);
             MethodInfo methodInfo = realType.GetMethod(methodCallMessage.MethodName);
-            ReturnMessage returnMessage = null;
 
             try
             {
@@ -54,9 +52,7 @@ namespace ayberkcanturk.Aspect.Default
                     response = methodCallMessage.MethodBase.Invoke(instance, methodCallMessage.InArgs);
                 }
 
-                returnMessage = new ReturnMessage(response, null, 0, methodCallMessage.LogicalCallContext, methodCallMessage);
-
-                return returnMessage;
+                return new ReturnMessage(response, null, 0, methodCallMessage.LogicalCallContext, methodCallMessage);
             }
             catch (Exception e)
             {

@@ -1,23 +1,16 @@
-﻿using ayberkcanturk.Aspect.Default;
-using System.Diagnostics;
-
-namespace ayberkcanturk.Aspect.Console
+﻿namespace ayberkcanturk.Aspect.Console
 {
     using System;
+    using Default;
     class Program
     {
         static void Main(string[] args)
         {
-            IDao dao = Dao.Instance;
+            IProductService productService = ProxyFactory.GetTransparentProxy<IProductService, ProductService>();
+            Product product = productService.GetProduct(1);
 
-            IProductService ps = new ProductService();
-            IProductService psProxy = ProxyFactory.GetTransparentProxy<IProductService, ProductService>(ps);
-            var product = psProxy.GetProduct(1);
-
-            IProductService psProxy2 = ProxyFactory.GetTransparentProxy<IProductService, ProductService>();
-            var product2 = psProxy2.GetProduct(1);
-
-            Console.WriteLine();
+            Console.WriteLine($"Id: {product.Id}, Name: {product.Name}, Price: {product.Price}");
+            Console.ReadLine();
         }
     }
 }
