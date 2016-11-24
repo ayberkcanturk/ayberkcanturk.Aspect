@@ -9,7 +9,7 @@ namespace ayberkcanturk.Aspect.Default
     using Core;
 
     [DebuggerStepThrough]
-    public class TransparentProxy<T, TI> : RealProxy where T : TI, new()
+    public class TransparentProxy<TI, T> : RealProxy where T : TI, new()
     {
         private readonly TI instance;
 
