@@ -30,7 +30,7 @@ namespace ayberkcanturk.Aspect.Console
             if (product == null)
             {
                 product = dao.GetByIdFromDb(productId);
-                dao.AddToCache("GetProduct_1", product, DateTime.UtcNow.AddMinutes(10));
+                dao.AddToCache($"GetProduct_{productId}", product, DateTime.UtcNow.AddMinutes(10));
             }
 
             return product;
