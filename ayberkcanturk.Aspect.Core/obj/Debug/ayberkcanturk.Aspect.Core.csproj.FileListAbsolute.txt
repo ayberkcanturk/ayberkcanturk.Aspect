@@ -1,8 +1,0 @@
-C:\Users\ayberk.canturk\Downloads\ayberkcanturk.Framework.Aspect\ayberkcanturk.Aspect.Core\bin\Debug\ayberkcanturk.Aspect.Core.dll
-C:\Users\ayberk.canturk\Downloads\ayberkcanturk.Framework.Aspect\ayberkcanturk.Aspect.Core\bin\Debug\ayberkcanturk.Aspect.Core.pdb
-C:\Users\ayberk.canturk\Downloads\ayberkcanturk.Framework.Aspect\ayberkcanturk.Aspect.Core\obj\Debug\ayberkcanturk.Aspect.Core.dll
-C:\Users\ayberk.canturk\Downloads\ayberkcanturk.Framework.Aspect\ayberkcanturk.Aspect.Core\obj\Debug\ayberkcanturk.Aspect.Core.pdb
-D:\AYBERK CANTURK\ayberkcanturk.Aspect\ayberkcanturk.Aspect.Core\bin\Debug\ayberkcanturk.Aspect.Core.dll
-D:\AYBERK CANTURK\ayberkcanturk.Aspect\ayberkcanturk.Aspect.Core\bin\Debug\ayberkcanturk.Aspect.Core.pdb
-D:\AYBERK CANTURK\ayberkcanturk.Aspect\ayberkcanturk.Aspect.Core\obj\Debug\ayberkcanturk.Aspect.Core.dll
-D:\AYBERK CANTURK\ayberkcanturk.Aspect\ayberkcanturk.Aspect.Core\obj\Debug\ayberkcanturk.Aspect.Core.pdb
