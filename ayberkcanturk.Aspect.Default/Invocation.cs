@@ -6,23 +6,23 @@ using ayberkcanturk.Aspect.Core;
 namespace ayberkcanturk.Aspect.Default
 {
     [DebuggerStepThrough]
-    public class Invocation<T> : IInvocation
+    public class Invocation<TI> : IInvocation
     {
         private IMethodCallMessage MethodCallMessage { get; set; }
         public string MethodName { get; set; }
         public object[] Arguments { get; set; }
         public Type ReturnType { get; set; }
         public object Response { get; set; }
-        private T Target { get; set; }
+        private TI Target { get; set; }
         public bool IsProcceeded { get; set; }
 
-        public Invocation(IMethodCallMessage methodCallMessage, Type returnType)
+        public Invocation(TI instance, IMethodCallMessage methodCallMessage, Type returnType)
         {
             MethodCallMessage = methodCallMessage;
             MethodName = methodCallMessage.MethodName;
             Arguments = methodCallMessage.InArgs;
             ReturnType = returnType;
-            Target = Activator.CreateInstance<T>();
+            Target = instance;
         }
 
         public object Procceed()

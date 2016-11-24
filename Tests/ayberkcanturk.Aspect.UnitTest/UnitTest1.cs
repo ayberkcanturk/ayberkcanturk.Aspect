@@ -11,7 +11,7 @@ namespace ayberkcanturk.Aspect.UnitTest
         [TestInitialize]
         public void Initialize()
         {
-            productService = TransparentProxy<ProductService, IProductService>.GenerateProxy();
+            productService = ProxyFactory.GetTransparentProxy<IProductService, ProductService>();
         }
 
         [TestMethod]

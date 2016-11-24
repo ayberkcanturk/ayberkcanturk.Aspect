@@ -1,5 +1,4 @@
-﻿using ayberkcanturk.Aspect.Core;
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Reflection;
 using System.Runtime.Remoting.Messaging;
@@ -7,6 +6,8 @@ using System.Runtime.Remoting.Proxies;
 
 namespace ayberkcanturk.Aspect.Default
 {
+    using Core;
+
     [DebuggerStepThrough]
     public class TransparentProxy<T, TI> : RealProxy where T : TI, new()
     {
@@ -14,7 +15,7 @@ namespace ayberkcanturk.Aspect.Default
 
         private TransparentProxy() : base(typeof(TI))
         {
-            instance = new T();
+            this.instance = new T();
         }
 
         internal TransparentProxy(TI instance) : base(typeof(TI))
@@ -36,7 +37,7 @@ namespace ayberkcanturk.Aspect.Default
 
                 if (interceptors.Length > 0)
                 {
-                    invocation = new Invocation<T>(methodCallMessage, methodInfo.ReturnType);
+                    invocation = new Invocation<TI>(instance, methodCallMessage, methodInfo.ReturnType);
                     foreach (IInterceptor interceptor in interceptors)
                     {
                         interceptor.Intercept(ref invocation);
