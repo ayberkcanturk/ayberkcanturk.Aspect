@@ -27,6 +27,9 @@ namespace ayberkcanturk.Aspect.Default
 
         public object Procceed()
         {
+            if (IsProcceeded)
+                return null;
+
             object result = MethodCallMessage.MethodBase.Invoke(Target, MethodCallMessage.InArgs);
             IsProcceeded = true;
 
