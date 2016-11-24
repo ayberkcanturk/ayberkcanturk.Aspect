@@ -13,7 +13,6 @@ namespace ayberkcanturk.Aspect.Console
         private Dao()
         {
             inMemCache = new Dictionary<string, Tuple<object, DateTime>>();
-
             inMemDb = new Dictionary<int, Product>();
             inMemDb.Add(1, new Product() { Id = 1, Name = "MacBook Air", Price = 3000 });
             inMemDb.Add(2, new Product() { Id = 2, Name = "Sony Xperia Z Ultra", Price = 1400 });
@@ -22,7 +21,6 @@ namespace ayberkcanturk.Aspect.Console
         public void AddToCache(string key, object value, DateTime expirationDate)
         {
             Tuple<object, DateTime> cache = new Tuple<object, DateTime>(value, expirationDate);
-
             inMemCache.Add(key, cache);
         }
 
@@ -31,7 +29,6 @@ namespace ayberkcanturk.Aspect.Console
             Tuple<object, DateTime> cache = null;
             bool exists = inMemCache.TryGetValue(key, out cache);
             object val = null;
-
             if (exists && cache.Item2 > DateTime.UtcNow)
             {
                 val = cache.Item1;
