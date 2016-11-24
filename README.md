@@ -3,6 +3,36 @@ ayberkcanturk.Aspect is a provider of a proxy between the woven class and the co
 
 #Usage
 
+
+    public class ProductService : IProductService
+    {
+        private readonly IDao dao;
+
+        public ProductService()
+        {
+            dao = Dao.Instance;
+        }
+
+        [CacheInterceptor(DurationInMinute = 10)]
+        public Product GetProduct(int productId)
+        {
+            return dao.GetByIdFromDb(productId);
+        }
+
+        public Product GetProductWithCache(int productId)
+        {
+            Product product = dao.GetByKeyFromCache<Product>("GetProduct_1");
+
+            if (product == null)
+            {
+                product = dao.GetByIdFromDb(productId);
+                dao.AddToCache("GetProduct_1", product, DateTime.UtcNow.AddMinutes(10));
+            }
+
+            return product;
+        }
+    }
+
     public class CacheInterceptor : Attribute, IInterceptor
     {
         public int DurationInMinute { get; set; }
@@ -42,9 +72,9 @@ ayberkcanturk.Aspect is a provider of a proxy between the woven class and the co
     {
         static void Main(string[] args)
         {    
-            IProductService productService2 = TransparentProxy<ProductService, IProductService>.GenerateProxy();
-            var product2 = productService2.GetProduct(1);
-            Console.WriteLine($"Id: {product2.Id}, Name: {product2.Name}, Price: {product2.Price}");
+            IProductService proxy = ProxyFactory.GetTransparentProxy<IProductService, ProductService>();
+            var product = proxy.GetProduct(1);
+            Console.WriteLine($"Id: {product.Id}, Name: {product.Name}, Price: {product.Price}");
             Console.ReadLine();
         }
     }
