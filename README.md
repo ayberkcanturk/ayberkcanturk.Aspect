@@ -18,22 +18,21 @@ ayberkcanturk.Aspect is a provider of a proxy between the woven class and the co
         {
             return dao.GetByIdFromDb(productId);
         }
-
+        
         public Product GetProductWithCache(int productId)
         {
-            Product product = dao.GetByKeyFromCache<Product>("GetProduct_1");
-
+            Product product = dao.GetByKeyFromCache<Product>($"GetProduct_{productId}");
             if (product == null)
             {
                 product = dao.GetByIdFromDb(productId);
-                dao.AddToCache("GetProduct_1", product, DateTime.UtcNow.AddMinutes(10));
+                dao.AddToCache($"GetProduct_{productId}", product, DateTime.UtcNow.AddMinutes(10));
             }
 
             return product;
-        }
+         }
     }
 
-    public class CacheInterceptor : Attribute, IInterceptor
+    public class CacheInterceptor : Interceptor
     {
         public int DurationInMinute { get; set; }
 
@@ -44,7 +43,7 @@ ayberkcanturk.Aspect is a provider of a proxy between the woven class and the co
             cacheService = Dao.Instance;
         }
 
-        public void Intercept(ref IInvocation invocation)
+        public override void Intercept(ref IInvocation invocation)
         {
             string cacheKey = string.Format("{0}_{1}", invocation.MethodName, string.Join("_", invocation.Arguments));
 
@@ -66,6 +65,7 @@ ayberkcanturk.Aspect is a provider of a proxy between the woven class and the co
                 }
             }
         }
+    }
         
         
     class Program
