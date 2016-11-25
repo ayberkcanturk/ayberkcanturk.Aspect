@@ -18,19 +18,6 @@ ayberkcanturk.Aspect is a provider of a proxy between the woven class and the co
         {
             return dao.GetByIdFromDb(productId);
         }
-
-        public Product GetProductWithCache(int productId)
-        {
-            Product product = dao.GetByKeyFromCache<Product>("GetProduct_1");
-
-            if (product == null)
-            {
-                product = dao.GetByIdFromDb(productId);
-                dao.AddToCache("GetProduct_1", product, DateTime.UtcNow.AddMinutes(10));
-            }
-
-            return product;
-        }
     }
 
     public class CacheInterceptor : Interceptor
