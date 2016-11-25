@@ -33,7 +33,7 @@ ayberkcanturk.Aspect is a provider of a proxy between the woven class and the co
         }
     }
 
-    public class CacheInterceptor : Attribute, IInterceptor
+    public class CacheInterceptor : Interceptor
     {
         public int DurationInMinute { get; set; }
 
@@ -44,7 +44,7 @@ ayberkcanturk.Aspect is a provider of a proxy between the woven class and the co
             cacheService = Dao.Instance;
         }
 
-        public void Intercept(ref IInvocation invocation)
+        public override void Intercept(ref IInvocation invocation)
         {
             string cacheKey = string.Format("{0}_{1}", invocation.MethodName, string.Join("_", invocation.Arguments));
 
@@ -66,6 +66,7 @@ ayberkcanturk.Aspect is a provider of a proxy between the woven class and the co
                 }
             }
         }
+    }
         
         
     class Program
