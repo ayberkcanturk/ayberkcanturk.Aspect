@@ -44,6 +44,8 @@ namespace ayberkcanturk.Aspect.Default
                         if (invocation.Response != null)
                         {
                             response = invocation.Response;
+                            //Return as soon as possible.
+                            return new ReturnMessage(response, null, 0, methodCallMessage.LogicalCallContext, methodCallMessage);
                         }
                     }
                 }

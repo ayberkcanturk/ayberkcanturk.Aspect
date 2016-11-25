@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EAE4683A-11D1-4B6D-B9BF-C4F6A56C53F8}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{287EF58D-4BAE-4A80-9A87-F19E1CA14B11}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ayberkcanturk.Aspect.Console</RootNamespace>
-    <AssemblyName>ayberkcanturk.Aspect.Console</AssemblyName>
+    <RootNamespace>ayberkcanturk.Aspect.Common</RootNamespace>
+    <AssemblyName>ayberkcanturk.Aspect.Common</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,24 +40,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Dao.cs" />
+    <Compile Include="IDao.cs" />
+    <Compile Include="Interceptor\CacheInterceptor.cs" />
+    <Compile Include="Interceptor\ExceptionHandlingInterceptor.cs" />
+    <Compile Include="IProductService.cs" />
+    <Compile Include="ProductService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\ayberkcanturk.Aspect.Core\ayberkcanturk.Aspect.Core.csproj">
-      <Project>{95DB8496-AC0A-483E-8373-8B04B4C115E4}</Project>
+      <Project>{95db8496-ac0a-483e-8373-8b04b4c115e4}</Project>
       <Name>ayberkcanturk.Aspect.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\ayberkcanturk.Aspect.Default\ayberkcanturk.Aspect.Default.csproj">
-      <Project>{FA80FB53-EECD-4559-A6C0-A0F8789276A6}</Project>
+      <Project>{fa80fb53-eecd-4559-a6c0-a0f8789276a6}</Project>
       <Name>ayberkcanturk.Aspect.Default</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Common\ayberkcanturk.Aspect.Common\ayberkcanturk.Aspect.Common.csproj">
-      <Project>{287ef58d-4bae-4a80-9a87-f19e1ca14b11}</Project>
-      <Name>ayberkcanturk.Aspect.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

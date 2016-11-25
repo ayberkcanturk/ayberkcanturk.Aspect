@@ -50,12 +50,6 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Dao.cs" />
-    <Compile Include="IDao.cs" />
-    <Compile Include="Interceptor\CacheInterceptor.cs" />
-    <Compile Include="Interceptor\ExceptionHandlingInterceptor.cs" />
-    <Compile Include="IProductService.cs" />
-    <Compile Include="ProductService.cs" />
     <Compile Include="ProductServiceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -67,6 +61,10 @@
     <ProjectReference Include="..\..\ayberkcanturk.Aspect.Default\ayberkcanturk.Aspect.Default.csproj">
       <Project>{fa80fb53-eecd-4559-a6c0-a0f8789276a6}</Project>
       <Name>ayberkcanturk.Aspect.Default</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\ayberkcanturk.Aspect.Common\ayberkcanturk.Aspect.Common.csproj">
+      <Project>{287ef58d-4bae-4a80-9a87-f19e1ca14b11}</Project>
+      <Name>ayberkcanturk.Aspect.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

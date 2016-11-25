@@ -2,6 +2,8 @@
 {
     using System;
     using Default;
+    using Common;
+
     class Program
     {
         static void Main(string[] args)

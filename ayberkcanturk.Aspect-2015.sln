@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demos", "Demos", "{5C17C35D-4954-436F-9F85-998957C4F2CF}"
 EndProject
@@ -14,6 +14,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6477B86F-298E-4962-BECE-13DD23385575}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ayberkcanturk.Aspect.UnitTest", "Tests\ayberkcanturk.Aspect.UnitTest\ayberkcanturk.Aspect.UnitTest.csproj", "{F954761B-0B82-410B-A2FF-8F45082141C3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{2D3F7EBB-23A0-4067-8026-B8ADD0537942}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ayberkcanturk.Aspect.Common", "Common\ayberkcanturk.Aspect.Common\ayberkcanturk.Aspect.Common.csproj", "{287EF58D-4BAE-4A80-9A87-F19E1CA14B11}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +41,10 @@ Global
 		{F954761B-0B82-410B-A2FF-8F45082141C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F954761B-0B82-410B-A2FF-8F45082141C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F954761B-0B82-410B-A2FF-8F45082141C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{287EF58D-4BAE-4A80-9A87-F19E1CA14B11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{287EF58D-4BAE-4A80-9A87-F19E1CA14B11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{287EF58D-4BAE-4A80-9A87-F19E1CA14B11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{287EF58D-4BAE-4A80-9A87-F19E1CA14B11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,5 +52,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{EAE4683A-11D1-4B6D-B9BF-C4F6A56C53F8} = {5C17C35D-4954-436F-9F85-998957C4F2CF}
 		{F954761B-0B82-410B-A2FF-8F45082141C3} = {6477B86F-298E-4962-BECE-13DD23385575}
+		{287EF58D-4BAE-4A80-9A87-F19E1CA14B11} = {2D3F7EBB-23A0-4067-8026-B8ADD0537942}
 	EndGlobalSection
 EndGlobal

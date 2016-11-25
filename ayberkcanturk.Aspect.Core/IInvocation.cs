@@ -8,7 +8,7 @@ namespace ayberkcanturk.Aspect.Core
         object[] Arguments { get; set; }
         Type ReturnType { get; set; }
         object Response { get; set; }
-        object Procceed();
         bool IsProcceeded { get; set; }
+        object Procceed();
     }
 }

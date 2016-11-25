@@ -1,8 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ayberkcanturk.Aspect.Default;
 
 namespace ayberkcanturk.Aspect.UnitTest
 {
+    using Default;
+    using Common;
+
     [TestClass]
     public class ProductServiceTest
     {

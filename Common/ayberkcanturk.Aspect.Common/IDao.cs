@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ayberkcanturk.Aspect.Console
+namespace ayberkcanturk.Aspect.Common
 {
     public interface IDao
     {

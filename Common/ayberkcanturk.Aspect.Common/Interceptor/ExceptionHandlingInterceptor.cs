@@ -2,7 +2,7 @@
 using ayberkcanturk.Aspect.Default;
 using System;
 
-namespace ayberkcanturk.Aspect.Console
+namespace ayberkcanturk.Aspect.Common
 {
     public class ExceptionHandlingInterceptor : Interceptor
     {

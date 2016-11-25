@@ -1,4 +1,4 @@
-﻿namespace ayberkcanturk.Aspect.Console
+﻿namespace ayberkcanturk.Aspect.Common
 {
     public interface IProductService
     {
