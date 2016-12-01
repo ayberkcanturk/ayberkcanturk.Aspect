@@ -6,14 +6,7 @@ namespace ayberkcanturk.Aspect.Default
     [AttributeUsage(AttributeTargets.Method)]
     public abstract class Interceptor : Attribute, IInterceptor
     {
-        void IInterceptor.Intercept(ref IInvocation invocation)
-        {
-            Intercept(ref invocation);
-        }
+        public abstract void Intercept(ref IInvocation invocation);
 
-        public virtual void Intercept(ref IInvocation invocation)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
