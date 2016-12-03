@@ -1,6 +1,8 @@
 # ayberkcanturk.Aspect
 ayberkcanturk.Aspect is a provider of a proxy between the woven class and the consumer. It uses the same mechanism as in remoting: the client 'see' the remote object, but it actually talks to its proxy. All accesses to the aspected object go through the proxy class. The aspect is implemented as a transparent proxy, derived from the System.Runtime.Remoting.Proxies.RealProxy class.
 
+[![Build status](https://ci.appveyor.com/api/projects/status/vfkhov9s5prklpr9?svg=true)](https://ci.appveyor.com/project/ayberkcanturk/ayberkcanturk-aspect)
+
 #ayberkcanturk.Aspect is on nuget
 To install ayberkcanturk.Aspect, run the following command in the Package Manager Console:
 Install-Package ayberkcanturk.Aspect
