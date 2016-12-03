@@ -7,8 +7,8 @@
     <ProjectGuid>{FA80FB53-EECD-4559-A6C0-A0F8789276A6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ayberkcanturk.Aspect.Default</RootNamespace>
-    <AssemblyName>ayberkcanturk.Aspect.Default</AssemblyName>
+    <RootNamespace>ayberkcanturk.Aspect</RootNamespace>
+    <AssemblyName>ayberkcanturk.Aspect</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
