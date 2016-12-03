@@ -3,7 +3,7 @@ ayberkcanturk.Aspect is a provider of a proxy between the woven class and the co
 
 #ayberkcanturk.Aspect is on nuget
 To install ayberkcanturk.Aspect, run the following command in the Package Manager Console:
->> Install-Package ayberkcanturk.Aspect
+Install-Package ayberkcanturk.Aspect
 
 #Usage
 
