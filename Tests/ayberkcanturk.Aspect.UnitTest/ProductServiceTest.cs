@@ -2,7 +2,6 @@
 
 namespace ayberkcanturk.Aspect.UnitTest
 {
-    using Default;
     using Common;
 
     [TestClass]

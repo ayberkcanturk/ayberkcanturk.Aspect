@@ -50,13 +50,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\ayberkcanturk.Aspect.Core\ayberkcanturk.Aspect.Core.csproj">
-      <Project>{95DB8496-AC0A-483E-8373-8B04B4C115E4}</Project>
-      <Name>ayberkcanturk.Aspect.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\ayberkcanturk.Aspect.Default\ayberkcanturk.Aspect.Default.csproj">
-      <Project>{FA80FB53-EECD-4559-A6C0-A0F8789276A6}</Project>
-      <Name>ayberkcanturk.Aspect.Default</Name>
+    <ProjectReference Include="..\..\ayberkcanturk.Aspect\ayberkcanturk.Aspect.csproj">
+      <Project>{fa80fb53-eecd-4559-a6c0-a0f8789276a6}</Project>
+      <Name>ayberkcanturk.Aspect</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Common\ayberkcanturk.Aspect.Common\ayberkcanturk.Aspect.Common.csproj">
       <Project>{287ef58d-4bae-4a80-9a87-f19e1ca14b11}</Project>

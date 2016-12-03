@@ -54,13 +54,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\ayberkcanturk.Aspect.Core\ayberkcanturk.Aspect.Core.csproj">
-      <Project>{95db8496-ac0a-483e-8373-8b04b4c115e4}</Project>
-      <Name>ayberkcanturk.Aspect.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\ayberkcanturk.Aspect.Default\ayberkcanturk.Aspect.Default.csproj">
+    <ProjectReference Include="..\..\ayberkcanturk.Aspect\ayberkcanturk.Aspect.csproj">
       <Project>{fa80fb53-eecd-4559-a6c0-a0f8789276a6}</Project>
-      <Name>ayberkcanturk.Aspect.Default</Name>
+      <Name>ayberkcanturk.Aspect</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Common\ayberkcanturk.Aspect.Common\ayberkcanturk.Aspect.Common.csproj">
       <Project>{287ef58d-4bae-4a80-9a87-f19e1ca14b11}</Project>

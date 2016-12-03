@@ -1,7 +1,6 @@
 ﻿namespace ayberkcanturk.Aspect.Console
 {
     using System;
-    using Default;
     using Common;
 
     class Program

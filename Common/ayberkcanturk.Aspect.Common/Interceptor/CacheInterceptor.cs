@@ -1,9 +1,8 @@
-﻿using ayberkcanturk.Aspect.Core;
-using ayberkcanturk.Aspect.Default;
-using System;
+﻿using System;
 
 namespace ayberkcanturk.Aspect.Common
 {
+    using Core;
     public class CacheInterceptor : Interceptor
     {
         public int DurationInMinute { get; set; }

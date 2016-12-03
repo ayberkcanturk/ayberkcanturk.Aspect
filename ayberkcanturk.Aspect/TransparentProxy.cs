@@ -4,7 +4,7 @@ using System.Reflection;
 using System.Runtime.Remoting.Messaging;
 using System.Runtime.Remoting.Proxies;
 
-namespace ayberkcanturk.Aspect.Default
+namespace ayberkcanturk.Aspect
 {
     using Core;
 
@@ -13,7 +13,7 @@ namespace ayberkcanturk.Aspect.Default
     {
         private readonly TI instance;
 
-        private TransparentProxy() : base(typeof(TI))
+        public TransparentProxy() : base(typeof(TI))
         {
             this.instance = new T();
         }

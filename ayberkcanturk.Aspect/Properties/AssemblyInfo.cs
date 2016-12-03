@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ayberkcanturk.Aspect.Default")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("ayberkcanturk.Aspect")]
+[assembly: AssemblyDescription("ayberkcanturk.Aspect is an interceptor provider of a proxy between the woven class and the consumer.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ayberkcanturk.Aspect.Default")]
+[assembly: AssemblyCompany("Ayberk CANTURK")]
+[assembly: AssemblyProduct("ayberkcanturk.Aspect")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

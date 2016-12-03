@@ -3,7 +3,7 @@ using System.Runtime.Remoting.Messaging;
 using System.Diagnostics;
 using ayberkcanturk.Aspect.Core;
 
-namespace ayberkcanturk.Aspect.Default
+namespace ayberkcanturk.Aspect
 {
     [DebuggerStepThrough]
     public class Invocation<TI> : IInvocation

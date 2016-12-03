@@ -1,11 +1,11 @@
-﻿namespace ayberkcanturk.Aspect.Default
+﻿namespace ayberkcanturk.Aspect
 {
     public class ProxyFactory
     {
-        public static TI GetTransparentProxy<TI, T>()  where T :TI , new()
+
+        public static TI GetTransparentProxy<TI, T>()  where T :TI, new()
         {
-            TI instance = new T();
-            TransparentProxy<TI, T> transparentProxy = new TransparentProxy<TI, T>(instance);
+            TransparentProxy<TI, T> transparentProxy = new TransparentProxy<TI, T>();
 
             return (TI)transparentProxy.GetTransparentProxy();
         }
