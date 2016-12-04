@@ -3,8 +3,9 @@ ayberkcanturk.Aspect is a provider of a proxy between the woven class and the co
 
 [![Build status](https://ci.appveyor.com/api/projects/status/vfkhov9s5prklpr9?svg=true)](https://ci.appveyor.com/project/ayberkcanturk/ayberkcanturk-aspect)
 
-#ayberkcanturk.Aspect is on nuget
+#ayberkcanturk.Aspect is on NuGet.org
 To install ayberkcanturk.Aspect, run the following command in the Package Manager Console:
+
 Install-Package ayberkcanturk.Aspect
 
 #Usage
