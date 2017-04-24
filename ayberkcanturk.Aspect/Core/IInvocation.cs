@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 namespace ayberkcanturk.Aspect.Core
 {
@@ -10,5 +11,6 @@ namespace ayberkcanturk.Aspect.Core
         object Response { get; set; }
         bool IsProcceeded { get; set; }
         object Procceed();
+        IDictionary Properties { get; set; }
     }
 }

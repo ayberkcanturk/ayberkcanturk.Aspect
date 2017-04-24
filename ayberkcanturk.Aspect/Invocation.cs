@@ -1,16 +1,19 @@
 ﻿using System;
 using System.Runtime.Remoting.Messaging;
 using System.Diagnostics;
-using ayberkcanturk.Aspect.Core;
+using System.Collections;
 
 namespace ayberkcanturk.Aspect
 {
+    using Core;
+
     [DebuggerStepThrough]
     public class Invocation<TI> : IInvocation
     {
         private IMethodCallMessage MethodCallMessage { get; set; }
         public string MethodName { get; set; }
         public object[] Arguments { get; set; }
+        public IDictionary Properties { get; set; }
         public Type ReturnType { get; set; }
         public object Response { get; set; }
         private TI Target { get; set; }
@@ -20,6 +23,7 @@ namespace ayberkcanturk.Aspect
         {
             MethodCallMessage = methodCallMessage;
             MethodName = methodCallMessage.MethodName;
+            Properties = methodCallMessage.Properties;
             Arguments = methodCallMessage.InArgs;
             ReturnType = returnType;
             Target = instance;
@@ -27,6 +31,7 @@ namespace ayberkcanturk.Aspect
 
         public object Procceed()
         {
+            //Prevent secondary execution
             if (IsProcceeded)
                 return null;
 

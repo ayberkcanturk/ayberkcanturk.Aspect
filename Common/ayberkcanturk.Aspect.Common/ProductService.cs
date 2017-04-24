@@ -19,6 +19,7 @@ namespace ayberkcanturk.Aspect.Common
         }
 
         [CacheInterceptor(DurationInMinute = 10)]
+        [ExceptionHandlingInterceptor]
         public Product GetProduct(int productId)
         {
             return dao.GetByIdFromDb(productId);
