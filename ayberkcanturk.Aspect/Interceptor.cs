@@ -8,7 +8,7 @@ namespace ayberkcanturk.Aspect
     [AttributeUsage(AttributeTargets.Method)]
     public abstract class Interceptor : Attribute, IInterceptor
     {
-        public delegate void OnExecutionError(IInvocation invocation, Exception exception);
+        public delegate void OnExecutionError(object sender, OnExecutionErrorEventArgs args);
         public delegate void PreExecution(object sender, PreExecutionEventArgs args);
         public delegate void PostExecution(object sender, PostExecutionEventArgs args);
         public event PreExecution PreExecutionHandler;
@@ -19,13 +19,13 @@ namespace ayberkcanturk.Aspect
         {
             try
             {
-                PreExecutionHandler?.Invoke(this, new PreExecutionEventArgs() { Invocation = invocation });
+                PreExecutionHandler?.Invoke(this, new PreExecutionEventArgs(invocation));
                 invocation.Procceed();
-                PostExecutionHandler?.Invoke(this, new PostExecutionEventArgs() { Invocation = invocation });
+                PostExecutionHandler?.Invoke(this, new PostExecutionEventArgs(invocation));
             }
             catch (Exception e)
             {
-                ExecutionErrorHandler?.Invoke(invocation, e);
+                ExecutionErrorHandler?.Invoke(this, new OnExecutionErrorEventArgs(invocation, e));
             }
         }
     }
